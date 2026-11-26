@@ -41,7 +41,7 @@ body,html{width:100%;height:100%;font-family:'Cormorant Garamond',Georgia,serif;
 
 #main-invitation{min-height:100vh;position:relative;display:flex;flex-direction:column;align-items:center;padding:60px 20px;opacity:0;transform:translateY(20px);transition:opacity 1.5s ease-out .6s,transform 1.5s ease-out .6s}
 #main-invitation::before{content:'';position:fixed;top:0;left:0;width:100vw;height:100vh;background:url('assets/fondo.jpg') no-repeat center center;background-size:cover;z-index:-1;will-change:transform}
-body.content-active #main-invitation{opacity:1;transform:translateY(0)}
+body.content-active #main-invitation{opacity:1;transform:none}
 .invitation-frame{max-width:500px;width:100%;border:1px solid rgba(160,110,200,.6);padding:50px 38px;text-align:center;position:relative;background:rgba(245,235,255,.92);box-shadow:0 15px 50px rgba(45,22,61,.35),0 0 0 1px rgba(255,255,255,.7) inset;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:4px;overflow:visible}
 .frame-sparkle{position:absolute;pointer-events:none;z-index:10}
 .frame-sparkle svg{animation:sparkle-pulse 2.5s ease-in-out infinite}
