@@ -55,7 +55,7 @@ body.content-active #main-invitation{opacity:1;transform:translateY(0)}
 .section-heading{font-size:30px;margin-bottom:16px;letter-spacing:1px}
 .section-heading-sm{font-size:24px;margin-bottom:12px;letter-spacing:1px}
 .section-tag{font-family:'Bodoni Moda',serif;font-style:italic;font-size:18px;letter-spacing:2px;color:var(--text-accent);margin-bottom:14px;font-weight:500}
-.main-title{font-family:'Pinyon Script',cursive;font-size:76px;color:var(--text-deep);margin-bottom:2px;text-shadow:0 1px 3px rgba(255,255,255,.8);line-height:1.1;padding-right:20px;display:block;width:100%;text-align:center}
+.main-title{font-family:'Pinyon Script',cursive;font-size:76px;color:var(--text-accent);margin-bottom:2px;text-shadow:0 1px 3px rgba(255,255,255,.8);line-height:1.1;padding-right:20px;display:block;width:100%;text-align:center}
 .main-sub{font-family:'Pinyon Script',cursive;font-size:52px;color:var(--text-accent);line-height:1;margin-bottom:30px;padding-right:12px}
 .phrase{font-family:'EB Garamond','Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--text-muted);line-height:1.6;margin-bottom:35px;padding:0 10px}
 .family-names{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;font-style:italic;color:var(--text-deep);line-height:1.6;margin-top:6px}
@@ -120,6 +120,15 @@ select.rsvp-input{appearance:none;-webkit-appearance:none;background-image:url("
 .btn-confirmar:hover::before{left:100%}
 .btn-confirmar:hover{box-shadow:0 8px 25px rgba(120,59,150,.55);transform:translateY(-2px)}
 .btn-confirmar svg{width:19px;height:19px;fill:#fff;flex-shrink:0}
+
+/* PASES NUMERADOS, SOLO ADULTOS Y LLUVIA DE SOBRES */
+.pase-card{margin:0 auto 28px;max-width:300px;padding:22px 18px;border:1.5px dashed rgba(201,155,36,.8);border-radius:12px;background:rgba(255,255,255,.55);box-shadow:0 8px 25px rgba(45,22,61,.1)}
+.pase-label{font-family:'Cinzel',serif;font-size:11px;letter-spacing:4px;color:var(--text-gold);font-weight:600;text-transform:uppercase}
+.pase-num{font-family:'Cinzel',serif;font-size:56px;font-weight:600;color:var(--text-accent);line-height:1.1;margin-top:6px}
+.pase-texto{font-family:'Bodoni Moda',serif;font-style:italic;font-size:22px;color:var(--text-deep)}
+.aviso-adultos{margin-top:22px;padding-top:18px;border-top:1px solid rgba(201,155,36,.45)}
+.aviso-adultos-titulo{font-family:'Cinzel',serif;font-size:12px;letter-spacing:4px;color:var(--text-gold);font-weight:600;text-transform:uppercase;margin-bottom:8px}
+.sobre-icon svg{width:44px;height:44px;fill:var(--text-gold);margin-bottom:10px;filter:drop-shadow(0 0 6px rgba(201,155,36,.4))}
 
 #glitter-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:3;opacity:0;transition:opacity .8s}
 #glitter-canvas.visible{opacity:1}
@@ -228,6 +237,12 @@ select.rsvp-input{appearance:none;-webkit-appearance:none;background-image:url("
 <div class="family-names">Jesús Alfonso Galaviz Parra<br>Daniela Verdugo Chaves<br>Nallely Carolina García Cruz<br>Mario Ibarra Leyva</div>
 </div>
 
+<div class="pase-card reveal-scale" id="pase-card" style="display:none">
+<div class="pase-label">Pase de entrada</div>
+<div class="pase-num" id="pase-num">1</div>
+<div class="pase-texto" id="pase-texto">persona</div>
+</div>
+
 <div class="divider-ornate reveal-scale"><div class="divider-ornate-diamond"></div></div>
 
 <div class="section-heading-sm reveal-up">Cuenta Regresiva</div>
@@ -314,11 +329,25 @@ Guardar la fecha
 <div class="reveal-up delay-2" style="font-size:20px;font-style:italic;color:var(--text-muted);margin-top:10px;line-height:1.6;font-weight:600">
 Por favor reserva los colores <strong>Lila y Morado</strong> para la quinceañera.
 </div>
+<div class="aviso-adultos reveal-up delay-3">
+<div class="aviso-adultos-titulo">Evento solo para adultos</div>
+<div style="font-size:20px;font-style:italic;color:var(--text-muted);line-height:1.6;font-weight:600">
+Con mucho cariño, mi celebración será exclusivamente para adultos. Te agradezco de corazón tu comprensión por no asistir con niños, para que todos disfrutemos de una noche mágica.
+</div>
+</div>
 </div>
 
 <div class="divider-ornate reveal-scale"><div class="divider-ornate-diamond"></div></div>
 
 <div class="bloque-vidrio-alt reveal-scale">
+<div class="sobre-icon reveal-up"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+<div class="section-heading reveal-up">Lluvia de Sobres</div>
+<p class="rsvp-intro reveal-up delay-1" style="margin-bottom:0">Tu presencia es el mejor regalo que puedo recibir. Si deseas tener un detalle conmigo, habrá una mesa de sobres en la recepción donde podrás dejar tu lluvia de sobres.</p>
+</div>
+
+<div class="divider-ornate reveal-scale"><div class="divider-ornate-diamond"></div></div>
+
+<div class="bloque-vidrio reveal-scale">
 <div class="section-heading reveal-up">Confirmación de Asistencia</div>
 <p class="rsvp-intro reveal-up delay-1">Será un honor contar con tu luz en esta noche mágica. Por favor confirma tu asistencia.</p>
 <div class="reveal-up delay-2">
@@ -342,7 +371,7 @@ Confirmar por WhatsApp
 
 <div class="divider-ornate reveal-scale"><div class="divider-ornate-diamond"></div></div>
 
-<div class="bloque-vidrio reveal-scale">
+<div class="bloque-vidrio-alt reveal-scale">
 <div class="section-heading reveal-up">Muro de los Deseos</div>
 <p class="rsvp-intro reveal-up delay-1">Tu mensaje iluminará mi camino como una linterna flotante. ¡Déjame tus buenos deseos!</p>
 <form id="wish-form" style="text-align:left" class="reveal-up delay-2">
@@ -365,6 +394,15 @@ Enviar Mensaje
 <script>
 const WA_NUMBER='526681119146';
 let isPlaying=false;
+
+/* PASES NUMERADOS INVYTIA (?p=n) */
+const PASES=(()=>{const n=parseInt(new URLSearchParams(location.search).get('p'),10);return Number.isInteger(n)&&n>0&&n<=99?n:null})();
+document.addEventListener('DOMContentLoaded',()=>{
+if(!PASES)return;
+document.getElementById('pase-num').textContent=PASES;
+document.getElementById('pase-texto').textContent=PASES===1?'persona':'personas';
+document.getElementById('pase-card').style.display='block';
+});
 
 /* GLITTER */
 const canvas=document.getElementById('glitter-canvas'),ctx=canvas.getContext('2d');
@@ -439,7 +477,7 @@ i.innerHTML=isPlaying?'<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>':'<path d="M8
 function sendConfirmationViaWhatsApp(){
 const inp=document.getElementById('guest-name'),attend=document.getElementById('guest-attend').value;
 if(!inp.value.trim()){alert('Por favor ingresa tu nombre completo.');inp.focus();return}
-const msg=`¡Hola! Soy ${inp.value.trim()} y te escribo para confirmar que *${attend}* a los XV Años de Estrella Krystel.`;
+const msg=`¡Hola! Soy ${inp.value.trim()} y te escribo para confirmar que *${attend}* a los XV Años de Estrella Krystel.`+(PASES?` Mi invitación es de ${PASES} ${PASES===1?'pase':'pases'}.`:'');
 window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`,'_blank');
 }
 
